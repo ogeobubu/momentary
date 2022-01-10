@@ -1,5 +1,7 @@
 # Momentary
 
+A simple web application with the simplicity of its design basically used for the upload of images (only jpeg and png files) using Cloudinary API and MongoDB as the database to save image URL.
+
 ## Installation: Get Started
 
 Make sure you have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) installed by running the following command:
