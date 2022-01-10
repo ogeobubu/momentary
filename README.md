@@ -62,6 +62,9 @@ MongoDB is a source-available cross-platform document-oriented database program.
 - ### NodeJS
 Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
 
+- ### Sass
+Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets. SassScript is the scripting language itself. Sass consists of two syntaxes. The original syntax, called "the indented syntax,"uses a syntax similar to Haml.
+
 ## Features / Functionalities
 
 - [x] Upload Image to Cloudinary using Cloudinary API.
