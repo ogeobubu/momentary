@@ -1,0 +1,24 @@
+.button {
+    font-family: Poppins;
+    padding: .8rem 2rem;
+    border-radius: 5px;
+    background-color: blue;
+    outline: none;
+    border: none;
+    font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 22px;
+color: #FFFFFF;
+cursor: pointer;
+}
+
+.output {
+    margin-top: 2rem;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
