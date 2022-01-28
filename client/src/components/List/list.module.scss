@@ -1,0 +1,23 @@
+.listSection {
+margin-top: 2rem;
+padding: 0 2rem;
+}
+
+.title {
+    font-weight: 300;
+    color: #6b8ebb;
+    font-size: 15px;
+}
+
+.list {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .listSection {
+        padding: 0;
+    }
+    .title {
+        font-size: 12px;
+    }
+}

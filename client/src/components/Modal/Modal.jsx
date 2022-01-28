@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./modal.module.scss";
 import picture from "../../assets/picture.jpg";
 import { Delete } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
 import { removeId } from "../../redux/urlSlice.js";
+import axios from "axios";
 
-const Modal = ({ singleImage }) => {
-  const dispatch = useDispatch();
+const Modal = ({ id, setID }) => {
+  const [image, setImage] = useState({});
+
   const handleClick = (e) => {
     if (e.target.classList.contains("_backdrop_b8c04_1")) {
-      dispatch(removeId());
+      setID(null);
     }
   };
+
+  useEffect(() => {
+    if (id) {
+      const getImage = async () => {
+        const response = await axios.get(
+          `http://localhost:5000/api/images/${id}`
+        );
+        setImage(response.data.message);
+      };
+      getImage();
+    }
+  }, [id]);
 
   return (
     <motion.div
@@ -22,7 +36,7 @@ const Modal = ({ singleImage }) => {
       animate={{ opacity: 1 }}
     >
       <motion.img
-        src={singleImage.image}
+        src={image.image}
         alt="enlarged pic"
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}

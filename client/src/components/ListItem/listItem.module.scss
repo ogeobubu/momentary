@@ -1,0 +1,78 @@
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    box-shadow: 3px -1px 43px 0px rgba(0,0,0,0.27);
+-webkit-box-shadow: 3px -1px 43px 0px rgba(0,0,0,0.27);
+-moz-box-shadow: 3px -1px 43px 0px rgba(0,0,0,0.27);
+background: white;
+padding: 2rem 1rem;
+margin-bottom: 1rem;
+}
+
+.left {
+    width: 70px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 400;
+    margin-bottom: .5rem;
+    font-size: 14px;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 50px;
+    background: #ccc;
+    margin: 3px 0px;
+    overflow: hidden;
+}
+
+.progressInner {
+    width: 50%;
+    height: 100%;
+    background: red;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(247, 64, 64, 0.5);
+    cursor: pointer;
+}
+
+.small {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b8ebb;
+    margin-top: .3rem;
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    .left{
+        width: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .left {
+        display: none;
+    }
+    .title {
+        font-size: 10px;
+    }
+}

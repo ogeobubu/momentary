@@ -10,28 +10,90 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: #f8f8f4;
+  background-color: #7594EC;
 }
 
 .container {
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  height: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 45%;
+  height: 100%;
+}
+
+.white {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-shadow: 3px -1px 43px 0px rgba(0,0,0,0.27);
+-webkit-box-shadow: 3px -1px 43px 0px rgba(0,0,0,0.27);
+-moz-box-shadow: 3px -1px 43px 0px rgba(0,0,0,0.27);
 }
 
 .title {
   text-align: center;
+  text-transform: uppercase;
+  color: #6b8ebb;
+  font-weight: 300;
 }
 
 .instruction {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: .5rem;
 margin-bottom: 1rem;
+color: #6b8ebb;
+}
 
+.dragUpload {
+  width: 100%;
+}
+
+.uploadContainer {
+  width: 90%;
+  border: 5px dashed #A8B3E3;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F5F9FE;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.cloudDescription {
+  margin-top: .5rem;
+  color: #8B97BC;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.or {
+  margin: .5rem 0;
+  color: #8B97BC;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cloudDescription {
+    font-size: 16px
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 370px) {
+  .cloudDescription {
+    font-size: 12px
+  }
 }

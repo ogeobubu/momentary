@@ -4,10 +4,11 @@
   "type": "module",
   "description": "An image gallery using Cloudinary API to upload and delete image files",
   "main": "server.js",
+  "proxy": "http://localhost:5000/",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "cd client && yarn start",
+    "client": "cd client && yarn run dev",
     "server-install": "npm install",
     "client-install": "cd client && npm install",
     "install-all": "concurrently \"npm run server-install\"  \"npm run client-install\"",
@@ -23,6 +24,7 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.5",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "react-drag-drop-files": "^2.2.5"
   }
 }

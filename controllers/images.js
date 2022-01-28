@@ -27,9 +27,10 @@ export const getImage = async (req, res) => {
 };
 
 export const postURL = async (req, res) => {
-  const { image } = req.body;
+  const { title, image } = req.body;
 
   const data = {
+    title,
     image,
   };
 
@@ -39,6 +40,9 @@ export const postURL = async (req, res) => {
     createImage.save();
 
     return res.status(201).json({
+      _id: createImage._id,
+      title: createImage.title,
+      image: createImage.image,
       message: "Image has been uploaded successfully",
     });
   } catch (error) {
@@ -58,6 +62,7 @@ export const deleteImage = async (req, res) => {
       });
     } else {
       return res.status(200).json({
+        data: image,
         message: "This image has successfully been deleted.",
       });
     }
