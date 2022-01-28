@@ -19,9 +19,7 @@ const Modal = ({ id, setID }) => {
   useEffect(() => {
     if (id) {
       const getImage = async () => {
-        const response = await axios.get(
-          `http://localhost:5000/api/images/${id}`
-        );
+        const response = await axios.get(`/api/images/${id}`);
         setImage(response.data.message);
       };
       getImage();
